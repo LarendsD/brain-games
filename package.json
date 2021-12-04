@@ -1,5 +1,8 @@
 {
   "name": "@hexlet/code",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "version": "1.0.0",
   "description": "my first project",
   "type": "module",
@@ -18,6 +21,8 @@
   },
   "homepage": "https://github.com/LarendsD/backend-project-lvl1#readme",
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3"
   }
 }
