@@ -2,6 +2,8 @@
 import readlineSync from 'readline-sync';
 
 const greet = (greeting) => {
-  console.log(`Hello, ${readlineSync.question(greeting)}!`);
+  const name = readlineSync.question(greeting);
+  console.log(`Hello, ${name}!`);
+  return name;
 };
 export default greet;
