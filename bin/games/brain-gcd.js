@@ -7,7 +7,9 @@ console.log('Find the greatest common divisor of given numbers.');
 const findgcd = (firstNumber, secondNumber) => {
   let maxdel = 0;
   let result = 0;
-  if (firstNumber > secondNumber) {
+  if (firstNumber === secondNumber) {
+    return firstNumber;
+  } if (firstNumber > secondNumber) {
     maxdel = (firstNumber / 2);
   } else {
     maxdel = (secondNumber / 2);
