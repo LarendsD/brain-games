@@ -1,13 +1,14 @@
 ---
-
+  
 # https://eslint.org/docs/user-guide/configuring#specifying-environments
+
 env:
   node: true
   es2020: true
 
 extends:
   - 'airbnb-base'
-  - 'plugin:eslint/recommended'
+  - 'plugin:jest/recommended'
 
 parserOptions:
   ecmaVersion: 11
