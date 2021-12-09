@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import greet from '../../src/cli.js';
-import { Question, Answer, compare } from '../../src/index.js';
+import greet from './src/cli.js';
+import { Question, Answer, compare } from './src/index.js';
 
 const name = greet();
 console.log('Find the greatest common divisor of given numbers.');
