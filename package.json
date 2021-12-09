@@ -26,11 +26,6 @@
   },
   "homepage": "https://github.com/LarendsD/backend-project-lvl1#readme",
   "dependencies": {
-<<<<<<< HEAD
-    "eslint-config-airbnb": "^19.0.2",
-    "eslint-plugin": "^1.0.1",
-=======
->>>>>>> 710f70f (little fix)
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
