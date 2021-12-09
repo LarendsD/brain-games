@@ -14,3 +14,4 @@
 5.Игра для проверки,является ли число простым. Введите brain-prime,чтобы начать!
 <a href="https://asciinema.org/a/454284" target="_blank"><img src="https://asciinema.org/a/454284.svg" /></a>
 Удачи на играх разума!
+d
