@@ -48,5 +48,5 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: 6bf06668edbe499035f53ee08c0c98f762f35e76d8732f2901e4405b2381e861
         with:
-          coverageCommand: make publish
+          coverageCommand: lcov --capture --directory backend-project-lvl1 --output-file coverage.info
           debug: true
