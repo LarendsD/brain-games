@@ -7,7 +7,7 @@ const findgcd = () => {
   let correctAnswer = 0;
   const question = `${randomValue1} ${randomValue2}`;
   if (randomValue1 === randomValue2) {
-    return String(randomValue2);
+    return `${question};${String(randomValue2)}`;
   } if (randomValue1 > randomValue2) {
     maxdel = (randomValue1 / 2);
   } else {
