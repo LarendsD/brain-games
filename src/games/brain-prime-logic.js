@@ -1,3 +1,5 @@
+import { randomNumber } from '../index.js';
+
 const IsNumberSimple = (num) => {
   for (let del = 2; del <= num / 2; del += 1) {
     if (num % del === 0) {
@@ -8,13 +10,12 @@ const IsNumberSimple = (num) => {
 };
 const findPrime = () => {
   let correctAnswer = '';
-  const randomNumber = Math.floor(Math.random() * (99 + 1));
-  console.log(`Question: ${randomNumber}`);
-  if (IsNumberSimple(randomNumber) === true) {
+  const question = randomNumber(0, 99);
+  if (IsNumberSimple(question) === true) {
     correctAnswer = 'yes';
   } else {
     correctAnswer = 'no';
   }
-  return correctAnswer;
+  return `${question};${correctAnswer}`;
 };
 export default findPrime;

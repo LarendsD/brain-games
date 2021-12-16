@@ -1,8 +1,10 @@
+import { randomNumber } from '../index.js';
+
 const findExpression = () => {
   const operators = '+-*';
-  const randomNumber1 = Math.floor(Math.random() * (99 + 1));
-  const randomNumber2 = Math.floor(Math.random() * (99 + 1));
-  const randomOperator = operators[Math.floor(Math.random() * operators.length)];
+  const randomNumber1 = randomNumber(0, 99);
+  const randomNumber2 = randomNumber(0, 99);
+  const randomOperator = operators[randomNumber(0, operators.length - 1)];
   let correctAnswer = '';
   switch (randomOperator) {
     case '+':
@@ -14,7 +16,7 @@ const findExpression = () => {
     default:
       correctAnswer = String(randomNumber1 * randomNumber2);
   }
-  console.log(`Question: ${randomNumber1} ${randomOperator} ${randomNumber2}`);
-  return correctAnswer;
+  const question = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
+  return `${question};${correctAnswer}`;
 };
 export default findExpression;
