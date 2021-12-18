@@ -1,13 +1,10 @@
-import { randomNumber } from '../index.js';
+import randomNumber from '../randomNumber.js';
+import commonLogic from '../index.js';
 
+const getCorrectAnswer = (number) => (number % 2 === 0);
 const findEven = () => {
   const question = randomNumber(0, 99);
-  let correctAnswer = '';
-  if (question % 2 === 0) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
-  }
-  return `${question};${correctAnswer}`;
+  const correctAnswer = getCorrectAnswer(question) ? 'yes' : 'no';
+  return [question, correctAnswer];
 };
-export default findEven;
+export default () => commonLogic('Answer "yes" if the number is even, otherwise answer "no".', findEven);

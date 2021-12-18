@@ -1,4 +1,5 @@
-import { randomNumber } from '../index.js';
+import randomNumber from '../randomNumber.js';
+import commonLogic from '../index.js';
 
 const IsNumberSimple = (num) => {
   for (let del = 2; del <= num / 2; del += 1) {
@@ -16,6 +17,6 @@ const findPrime = () => {
   } else {
     correctAnswer = 'no';
   }
-  return `${question};${correctAnswer}`;
+  return [question, correctAnswer];
 };
-export default findPrime;
+export default () => commonLogic('Answer "yes" if given number is prime. Otherwise answer "no".', findPrime);

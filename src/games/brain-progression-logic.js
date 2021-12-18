@@ -1,20 +1,23 @@
-import { randomNumber } from '../index.js';
+import randomNumber from '../randomNumber.js';
+import commonLogic from '../index.js';
 
-const findProgression = () => {
-  const randomIncriminateOfProgression = randomNumber(1, 15);
-  const randomLengthOfProgression = randomNumber(5, 10);
+const generateProgression = (randIncOfProg, randLenOfProg) => {
+  let RandFirstNumOfProg = randomNumber(1, 15);
   const randomProgression = [];
-  let RandomFirstNumberOfProgression = randomNumber(1, 15);
-  // create random progression;
-  for (let k = 0; k < randomLengthOfProgression; k += 1) {
-    randomProgression.push(RandomFirstNumberOfProgression);
-    RandomFirstNumberOfProgression += randomIncriminateOfProgression;
+  for (let k = 0; k < randLenOfProg; k += 1) {
+    randomProgression.push(RandFirstNumOfProg);
+    RandFirstNumOfProg += randIncOfProg;
   }
-  // create random empty element of array;
-  const randomIndex = randomNumber(0, randomLengthOfProgression - 1);
-  const correctAnswer = String(randomProgression[randomIndex]);
-  randomProgression[randomIndex] = '..';
-  const question = randomProgression.join(' ');
-  return `${question};${correctAnswer}`;
+  return randomProgression;
 };
-export default findProgression;
+const findProgression = () => {
+  const randIncOfProg = randomNumber(1, 15);
+  const randLenOfProg = randomNumber(5, 10);
+  const randomIndex = randomNumber(0, randLenOfProg - 1);
+  const progression = generateProgression(randIncOfProg, randLenOfProg);
+  const correctAnswer = String(progression[randomIndex]);
+  progression[randomIndex] = '..';
+  const question = progression.join(' ');
+  return [question, correctAnswer];
+};
+export default () => commonLogic('What number is missing in the progression?', findProgression);
