@@ -12,15 +12,12 @@ const commonLogic = (rule, logicOfGame) => {
     const yourAnswer = readlineSync.question('Your answer: ');
     if (correctAnswer === yourAnswer) {
       console.log('Correct!');
-      if (i === 2) {
-        return `Congratulations, ${name}!`;
-      }
     } else {
       console.log(`'${yourAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      break;
+      return `Let's try again, ${name}!`;
     }
   }
-  return `Let's try again, ${name}!`;
+  return `Congratulations, ${name}!`;
 };
 
 export default commonLogic;
