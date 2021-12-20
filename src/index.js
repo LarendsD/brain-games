@@ -5,19 +5,19 @@ const commonLogic = (rule, logicOfGame) => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log(rule);
-  for (let i = 0; i < 3; i += 1) {
-    const logic = logicOfGame();
-    const correctAnswer = logic[1];
-    console.log(`Question: ${logic[0]}`);
+  const countOfRounds = 3;
+  for (let i = 0; i < countOfRounds; i += 1) {
+    const [question, correctAnswer] = logicOfGame();
+    console.log(`Question: ${question}`);
     const yourAnswer = readlineSync.question('Your answer: ');
-    if (correctAnswer === yourAnswer) {
-      console.log('Correct!');
-    } else {
+    if (correctAnswer !== yourAnswer) {
       console.log(`'${yourAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      return `Let's try again, ${name}!`;
+      console.log(`Let's try again, ${name}!`);
+      return;
     }
+    console.log('Correct!');
   }
-  return `Congratulations, ${name}!`;
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default commonLogic;

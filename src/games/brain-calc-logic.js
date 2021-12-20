@@ -1,23 +1,29 @@
 import randomNumber from '../randomNumber.js';
 import commonLogic from '../index.js';
 
-const getCorrectAnswer = (randomNumber1, randomOperator, randomNumber2) => {
-  switch (randomOperator) {
+const operators = '+-*';
+const rule = 'What is the result of the expression?';
+
+const calculate = (number1, number2, operation) => {
+  switch (operation) {
     case '+':
-      return String(randomNumber1 + randomNumber2);
+      return number1 + number2;
     case '-':
-      return String(randomNumber1 - randomNumber2);
+      return number1 - number2;
+    case '*':
+      return number1 * number2;
     default:
-      return String(randomNumber1 * randomNumber2);
+      throw new Error(`operation ${operation} is not supported`);
   }
 };
+
 const findExpression = () => {
-  const operators = '+-*';
-  const randomNumber1 = randomNumber(0, 99);
-  const randomNumber2 = randomNumber(0, 99);
+  const randomNumber1 = randomNumber(1, 99);
+  const randomNumber2 = randomNumber(1, 99);
   const randomOperator = operators[randomNumber(0, operators.length - 1)];
-  const correctAnswer = getCorrectAnswer(randomNumber1, randomOperator, randomNumber2);
+  const correctAnswer = String(calculate(randomNumber1, randomNumber2, randomOperator));
   const question = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
   return [question, correctAnswer];
 };
-export default () => commonLogic('What is the result of the expression?', findExpression);
+
+export default () => commonLogic(rule, findExpression);
