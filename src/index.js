@@ -1,11 +1,12 @@
 import readlineSync from 'readline-sync';
 
+const countOfRounds = 3;
+
 const commonLogic = (rule, logicOfGame) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log(rule);
-  const countOfRounds = 3;
   for (let i = 0; i < countOfRounds; i += 1) {
     const [question, correctAnswer] = logicOfGame();
     console.log(`Question: ${question}`);

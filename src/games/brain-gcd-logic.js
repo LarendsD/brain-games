@@ -13,13 +13,13 @@ const getGcd = (number1, number2) => {
       b %= a;
     }
   }
-  return String(a + b);
+  return a + b;
 };
 
 const findGcd = () => {
   const randomValue1 = randomNumber(0, 99);
   const randomValue2 = randomNumber(0, 99);
-  const correctAnswer = getGcd(randomValue1, randomValue2);
+  const correctAnswer = String(getGcd(randomValue1, randomValue2));
   const question = `${randomValue1} ${randomValue2}`;
   return [question, correctAnswer];
 };

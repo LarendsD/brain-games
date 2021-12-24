@@ -2,6 +2,7 @@
 [![Actions Status](https://github.com/LarendsD/backend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/LarendsD/backend-project-lvl1/actions)
 <a href="https://codeclimate.com/github/LarendsD/backend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/9d453eda43d77e092f97/maintainability" /></a>
 ![badge](https://github.com/LarendsD/backend-project-lvl1/actions/workflows/lint.yml/badge.svg)
+
 Добро пожаловать на игры разума, где вы сможете испытытать свои математические навыки! Вам предоставлено несколько игр для этого!
 Инструкция по установке:
 Склонировать репозиторий c помощью git clone https://github.com/LarendsD/backend-project-lvl1.git
