@@ -13,9 +13,9 @@ const generateProgression = (step, length, firstNumber) => {
   return progression;
 };
 
-const hideNumberOfProgression = (progression, indexOfNumber) => {
-  const result = progression.slice(0);
-  result[indexOfNumber] = '..';
+const hideNumberOfProgression = (progression, hiddenIndex) => {
+  const result = progression.slice();
+  result[hiddenIndex] = '..';
   return result.join(' ');
 };
 
