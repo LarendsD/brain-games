@@ -2,6 +2,10 @@
   Игры разума
 </h1>
 
+[![Actions Status](https://github.com/LarendsD/backend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/LarendsD/backend-project-lvl1/actions)
+<a href="https://codeclimate.com/github/LarendsD/backend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/9d453eda43d77e092f97/maintainability" /></a>
+![badge](https://github.com/LarendsD/backend-project-lvl1/actions/workflows/lint.yml/badge.svg)
+
 <h3 align="center">
   Добро пожаловать на игры разума, где вы сможете испытытать свои математические навыки!
 </h3>
@@ -75,8 +79,3 @@ brain-prime
 <h1 align="center">
   Удачи на играх разума!
 </h1>
-
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/LarendsD/backend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/LarendsD/backend-project-lvl1/actions)
-<a href="https://codeclimate.com/github/LarendsD/backend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/9d453eda43d77e092f97/maintainability" /></a>
-![badge](https://github.com/LarendsD/backend-project-lvl1/actions/workflows/lint.yml/badge.svg)
