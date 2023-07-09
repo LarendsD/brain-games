@@ -5,7 +5,7 @@
 [![Actions Status](https://github.com/LarendsD/backend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/LarendsD/backend-project-lvl1/actions)
 <a href="https://codeclimate.com/github/LarendsD/backend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/9d453eda43d77e092f97/maintainability" /></a>
 ![badge](https://github.com/LarendsD/backend-project-lvl1/actions/workflows/lint.yml/badge.svg)
-
+.
 <h3 align="center">
   Welcome to the brain games, where you can test your math skills!
 </h3>
